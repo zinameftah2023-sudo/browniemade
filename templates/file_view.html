@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browniemade | View Lesson</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F9F6F0] text-[#4A4040] flex flex-col h-screen overflow-hidden">
+
+    <header class="bg-white border-b border-[#EBE3D8] px-6 py-4 flex justify-between items-center">
+        <div>
+            <a href="javascript:history.back()" class="text-xs font-bold text-[#85AF83] underline mb-1 inline-block">&larr; Back to Lessons</a>
+            <h1 class="text-md font-bold text-[#2C462A]">{{ filename }}</h1>
+        </div>
+        <div>
+            <a href="{{ download_url }}" class="bg-[#85AF83] text-white px-4 py-2 rounded-xl text-xs font-medium hover:bg-[#739b71] transition">
+                Download PDF
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-1 p-6 flex flex-col">
+        <div class="flex-1 bg-white rounded-2xl border border-[#EBE3D8] overflow-hidden shadow-sm">
+            <iframe src="{{ view_url }}" class="w-full h-full border-0"></iframe>
+        </div>
+    </main>
+
+</body>
+</html>
